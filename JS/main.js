@@ -1,8 +1,15 @@
-import '../assets/styles/style.scss';
+const buttonEl = document.querySelector('button');
+const inputEl = document.querySelector('input');
+const listEl = document.querySelector('ul');
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <p>esta es la plantilla</p>
-  </div>
-`;
+function addGoal() {
+  const enteredValue = inputEl.value;
+  const listItemEl = document.createElement('li');
+  listItemEl.textContent = enteredValue;
+  listEl.appendChild(listItemEl);
+  inputEl.value = '';
+}
+
+buttonEl.addEventListener('click', addGoal);
+ 40  
 
