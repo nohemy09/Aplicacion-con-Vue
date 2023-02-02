@@ -1,8 +1,33 @@
-import '../assets/styles/style.scss';
+// Tenemos que crear la aplicacion
+Vue.createApp({
+  // Tenemos que definir la data
+  data() {
+    return {
+      goals: [],
+      enteredValue: '', // Conectralo con HTML
+    };
+  },
+  methods: {
+    addGoal() {
+      this.goals.push(this.enteredValue);
+      this.enteredValue = '';
+    } // El metodo para agregar goals
+  }
+}).mount('#app');
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <p>esta es la plantilla</p>
-  </div>
-`;
+
+//const buttonEl = document.querySelector('button');
+//const inputEl = document.querySelector('input');
+//const listEl = document.querySelector('ul');
+
+//function addGoal() {
+  //const enteredValue = inputEl.value;
+  //const listItemEl = document.createElement('li');
+  //listItemEl.textContent = enteredValue;
+  //listEl.appendChild(listItemEl);
+  //inputEl.value = '';
+//}
+
+//buttonEl.addEventListener('click', addGoal);
+ //40  
 

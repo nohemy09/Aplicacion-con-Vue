@@ -4,13 +4,23 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <!--Mi hoja de estilos-->
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <title>A first App</title>
   </head>
   <body>
-    <header>
-      <h1>hola mundo</h1>
-    </header>
-    <div id="app"></div>
+    <main id="app">
+      <div>
+        <label for="goal">Goal</label>
+        <input type="text" id="goal" v-model="enteredValue"/>
+        <button v-on:click="addGoal">Add Goal</button>
+      </div>
+      <ul>
+        <li v-for="goal in goals">{{ goal }}</li>
+      </ul>
+    </main>
+    <!--Mi archivo de JS-->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script type="module" src="./JS/main.js"></script>
   </body>
 </html>
